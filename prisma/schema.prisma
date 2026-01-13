@@ -1,0 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:12345@localhost:5432/effective-mobile-test?schema=public"
+
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+model User {
+  id        String   @id @default(uuid())
+
+  name      String   @db.VarChar(100)
+  lastName  String   @db.VarChar(100)
+  middleName String? @db.VarChar(100)
+
+  birthDate DateTime
+  email     String   @unique @db.VarChar(255)
+  password  String   @db.VarChar(255)
+
+  role      Role     @default(USER)
+  isActive  Boolean  @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
