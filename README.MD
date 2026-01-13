@@ -10,11 +10,17 @@
 
 {
 name: "Admin",
+
 lastName: "Master",
+
 email: "admin@gmail.com",
-password,
+
+password: "123456",
+
 role: Role.ADMIN,
+
 isActive: true,
+
 birthDate: new Date("1990-01-01"),
 },
 
@@ -22,10 +28,16 @@ birthDate: new Date("1990-01-01"),
 
 {
 name: "John",
+
 lastName: "Doe",
+
 email: "bob@gmail.com",
-password,
+
+password: "123456",
+
 role: Role.USER,
+
 isActive: true,
+
 birthDate: new Date("1965-10-22"),
 },
