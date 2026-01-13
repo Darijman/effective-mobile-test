@@ -9,6 +9,7 @@
 ## ADMIN:
 
 {
+
 name: "Admin",
 
 lastName: "Master",
@@ -22,11 +23,13 @@ role: Role.ADMIN,
 isActive: true,
 
 birthDate: new Date("1990-01-01"),
+
 },
 
 ## USER:
 
 {
+
 name: "John",
 
 lastName: "Doe",
@@ -40,4 +43,5 @@ role: Role.USER,
 isActive: true,
 
 birthDate: new Date("1965-10-22"),
+
 },
